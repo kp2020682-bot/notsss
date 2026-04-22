@@ -34,7 +34,24 @@ def submit():
     cursor.close()
     conn.close()
 
-    return "Data saved successfully!"
+    return """
+    <div style="text-align:center; margin-top:100px; font-family:Arial;">
+        <h2 style="color:green;">Data saved successfully!</h2>
+
+        <a href="/">
+            <button style="
+                padding:12px 25px;
+                font-size:16px;
+                background:#2575fc;
+                color:white;
+                border:none;
+                border-radius:6px;
+                cursor:pointer;">
+                Fill Again
+            </button>
+        </a>
+    </div>
+    """
 
 if __name__ == "__main__":
     app.run(debug=True)
